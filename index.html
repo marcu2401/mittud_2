@@ -14,13 +14,21 @@
     <link rel="stylesheet" href="stilus.css">
 
     <script>
-      //animáció
-      function anime(){
+      //animáci
+      $(document).ready(function(){
         $("#hehe").click(function(){
-            $("#smile").animate({top:'14rem'},5000,);
-            $("#smile").animate({top:'-30rem'}, 5000);
+            $("#smile").show()
+                       .animate({top:'14rem'},5000,)
+                       .animate({top:'-30rem'}, 5000); 
+
+            $("body").css({backgroundColor:'black'});
+            $("#keret").css({border:'none', backgroundColor:'black', color:'white'}).addClass("vagany") ;
+            $("#span1").addClass("span1");  
+            $("#span2").addClass("span2");  
+            $("#span3").addClass("span3");  
+            $("#span4").addClass("span4");  
         });
-      }
+      });
         
         function Alaphelyzet() {
             document.getElementById('demo').style.fontSize = '30px';
@@ -35,16 +43,11 @@
         }
 
         function ejszakai() {
-            var element = document.getElementById('keret');
-            element.classList.toggle("ejszakai");
+            $("#keret").css({backgroundColor:'black', color:'white'});
           
         }
         function nappali() {
-            var element = document.getElementById('keret');
-            element.classList.toggle("nappali");
-        }
-        function frappans(){
-
+            $("#keret").css({backgroundColor:'white', color:'black'});
         }
         function olvaso(){
             $(document).ready(function(){
@@ -69,6 +72,10 @@
 <body>
   
     <div class="container-fluid" id="keret" style="position: relative;">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span>
         <img src="smiley.png" alt="" id="smile">
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" >
             VÁLTOZTASS!
@@ -89,8 +96,8 @@
                 <li class="nav-item">
                   <a class="nav-link " href="#"onclick="olvaso()">Olvasómód</a>
                 </li>
-                <li class="nav-item">
-                   <a  class="nav-link " href="#" id="hehe" onclick="anime()">Vagányság</a>
+                <li class="nav-item">    <!--onclick="anime()"-->
+                   <a  class="nav-link " href="#" id="hehe"  >Vagányság/Királyság/Hercegség/Sárm</a>
                 </li>
               </ul>
             </div>

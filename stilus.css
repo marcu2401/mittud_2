@@ -1,11 +1,18 @@
 body {
-    background-color: white;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     color: #000000;
   }
 #keret{
-margin: auto;
+margin: 20px auto;
 border: 5px darkblue solid;
 width: 1200px;
+position: relative;
+padding: 0rem 1.5rem 1.5rem 1.5rem;
+overflow:hidden;
+transition: 0.2s;
+background-color: white;
 }
 header{
     padding-top: 10px;
@@ -45,3 +52,68 @@ h2{
     width: 20vw;
     margin-left: 30%;
 }
+
+.vagany{
+    background: black;
+    box-shadow: 0 0 10px #0a6ab9, 0 0 40px #2196f3, 0 0 80px #2196f3 ;
+    transition-delay: 1s;
+}
+#keret span{
+    position: absolute;
+    display: block;
+}
+.span1{
+    top: 4rem;
+    left: -100%;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, transparent, #c50c3a);
+    animation: mymove 1.25s  infinite 
+    
+}
+.span2{
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 10px;
+    background: linear-gradient(90deg, transparent, #c50c3a);
+    animation: mymove2  1.25s  1s   infinite 
+    
+}
+.span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(270deg, transparent, #c50c3a);
+    animation: mymove3  1.25s  1s  infinite 
+}
+.span4{
+    bottom:-100%;
+    left: 0;
+    width:10px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #c50c3a);
+    animation: mymove4 1.25s 1s infinite 
+    
+}
+@keyframes mymove{
+    to {left: 100%; }
+    
+}
+@keyframes mymove2{
+    to {top: 100%; }
+    
+}
+    
+@keyframes mymove3{
+    to {right: 100%; }
+    
+}
+@keyframes mymove4{
+    to {bottom: 100%; }
+    
+}
+    
+    
+    
