@@ -1,0 +1,47 @@
+body {
+    background-color: white;
+    color: #000000;
+  }
+#keret{
+margin: auto;
+border: 5px darkblue solid;
+width: 1200px;
+}
+header{
+    padding-top: 10px;
+    text-align: center;
+}
+hr{
+    width: 80% rgb(165, 164, 164) ;
+}
+#belso{
+    border: 2px dashed rgb(46, 157, 231);
+    color:rgb(46, 157, 231) ;
+    font-size: 30px;
+    background-color: rgb(238, 195, 125);
+    padding-left:10px;
+    padding-top:10px ;
+}
+.kep{
+    border:green solid 2px;
+}
+h2{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.ejszakai{
+    background-color: rgb(31, 30, 30);
+    color: white;
+}
+.nappali{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+#smile{
+    position: absolute;
+    top: -30rem;
+    text-align: center;
+    z-index: 10000;
+    width: 20vw;
+    margin-left: 30%;
+}

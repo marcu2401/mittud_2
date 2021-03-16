@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mit tud?</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="stilus.css">
+
+    <script>
+      //animáció
+      function anime(){
+        $("#hehe").click(function(){
+            $("#smile").animate({top:'14rem'},5000,);
+            $("#smile").animate({top:'-30rem'}, 5000);
+        });
+      }
+        
+        function Alaphelyzet() {
+            document.getElementById('demo').style.fontSize = '30px';
+            document.getElementById('demo').style.color = 'rgb(46, 157, 231)';
+            document.getElementById('demo').style.fontFamily = 'Courier New';
+            document.getElementById('belso').style.border = '2px dashed';
+            document.getElementById('demo').style.padding = '15px';
+            document.getElementById('demo').style.marginLeft = '10px';
+            document.getElementById('demo').style.marginTop = '10px';
+            document.getElementById('belso').style.backgroundColor = 'rgb(238, 195, 125)';
+
+        }
+
+        function ejszakai() {
+            var element = document.getElementById('keret');
+            element.classList.toggle("ejszakai");
+          
+        }
+        function nappali() {
+            var element = document.getElementById('keret');
+            element.classList.toggle("nappali");
+        }
+        function frappans(){
+
+        }
+        function olvaso(){
+            $(document).ready(function(){
+                $("*").css({"fontSize":"30px"});
+                $("h1").css({"fontSize":"50px"});
+                $("p").css({"fontSize":"25px"});
+                $("h2").css({"fontSize":"35px"});
+            });
+        }
+        function adat(){
+        $(document).ready(function(){
+            $("img").hide();
+            $("#fel, #le").hide();
+            $("#fent, #lent").hide();
+        }) ; 
+    };
+        
+    </script>
+</head>
+
+
+<body>
+  
+    <div class="container-fluid" id="keret" style="position: relative;">
+        <img src="smiley.png" alt="" id="smile">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" >
+            VÁLTOZTASS!
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" onclick="ejszakai()">Éjszakai mód</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" onclick="nappali()">Nappali mód</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" onclick="adat()">Adatforgalom</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#"onclick="olvaso()">Olvasómód</a>
+                </li>
+                <li class="nav-item">
+                   <a  class="nav-link " href="#" id="hehe" onclick="anime()">Vagányság</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        <header>
+            <div class="row">
+                <div class=" col-lg-12 col-xl-12 col-md-12 col-sm-12 col-8">
+                    <div class="d-grid gap-2">
+                        <h1>Mit tud a javascript?</h1>
+                        <button class="btn  btn-outline-warning"
+                            onclick="alert('Az oldal szerzője: Juhász Márk!')">Szerző</button>
+                        <button class="btn  btn-outline-warning" onclick="window.print('asd')">Oldal nyomtatása</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <hr>
+        <article>
+            <div class="row">
+                <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12 col-8">
+                    <button type="button" class="btn btn-light btn-outline-primary"
+                        onclick="document.getElementById('bekezd').innerHTML = Date()">Mai dátum és idő
+                        megjelenítése</button>
+                    <button type="button" class="btn btn-light btn-outline-primary" 
+                        onclick="document.getElementById('bekezd').innerHTML = ''">Dátum
+                        törlése</button><br><br>
+                        <p id="bekezd"></p>
+                    <br>
+                    <img src="w3kicsi.PNG" class="rounded-pill img-fluid kep img-fluid" alt="w3schools">
+                </div>
+            </div>
+
+        </article>
+        <hr id="fent">
+
+        <article>
+            <div class="row">
+                <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12 col-8">
+                    <button type="button" class="btn btn-light btn-outline-primary"
+                        onclick="document.getElementById('izzo').src='pic_bulbon.gif'" id="fel">Kapcsold fel!</button>
+                    <img src="pic_bulboff.gif" class="img-fluid" alt="izzo" id="izzo">
+                    <button type="button" class="btn btn-light btn-outline-primary"
+                        onclick="document.getElementById('izzo').src='pic_bulboff.gif'" id="le">Kapcsold le!</button><br>
+                    <img src="w3kicsi.PNG" class="rounded-pill img-fluid kep img-fluid" alt="w3schools">
+                </div>
+            </div>
+        </article>
+        <hr id="lent">
+        <article>
+            <div class="row">
+                <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12 col-8">
+                    <h1>JavaScript megváltoztatja a HTML elemek stílusát. </h1>
+                    <div id="belso">
+                        <h2 id="demo">Megváltoztathatod a bekezdésed kinézetét!</h2>
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-light btn-outline-primary" id="meret"
+                        onclick="document.getElementById('demo').style.fontSize='45px'">Betűméret</button>
+                    <button type="button" class="btn btn-light btn-outline-primary" id="szin"
+                        onclick="document.getElementById('demo').style.color='#ff3300'">Betűszín</button>
+                    <button type="button" class="btn btn-light btn-outline-primary" id="zipus"
+                        onclick="document.getElementById('demo').style.fontFamily=('Verdana')">Betűtípus</button>
+                    <button type="button" class="btn btn-light btn-outline-primary" id="szegely"
+                        onclick="document.getElementById('belso').style.border='10px solid'">Szegély</button>
+                    <button type="button" class="btn btn-light btn-outline-primary" id="bmargo"
+                        onclick="document.getElementById('demo').style.padding='15px'">Belső margó</button>
+                    <button type="button" class="btn btn-light btn-outline-primary" id="kmargo"
+                        onclick="document.getElementById('demo').style.margin='20px'">Külső margó</button>
+                    <button type="button" class="btn btn-light btn-outline-primary" id="hszin"
+                        onclick="document.getElementById('belso').style.backgroundColor='#33ff33'">Háttérszín</button>
+
+                    <button type="button" class="btn btn-light btn-outline-primary"
+                        onclick="Alaphelyzet()">Alaphelyzet</button>
+                </div>
+            </div>
+        </article>
+        <br>
+        <footer>
+            <img src="w3kicsi.PNG" class="rounded-pill img-fluid kep img-fluid" alt="w3schools">
+        </footer>
+    </div>
+</body>
+
+</html>
