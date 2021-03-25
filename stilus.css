@@ -51,12 +51,17 @@ h2{
     z-index: 10000;
     width: 20vw;
     margin-left: 30%;
+    display: none;
 }
-
+.bodycs{
+    background-color: black;
+}
 .vagany{
     background: black;
     box-shadow: 0 0 10px #0a6ab9, 0 0 40px #2196f3, 0 0 80px #2196f3 ;
     transition-delay: 1s;
+    color: white;
+    border: none;
 }
 #keret span{
     position: absolute;
@@ -97,6 +102,15 @@ h2{
     animation: mymove4 1.25s 1s infinite 
     
 }
+/*--kiegészító calssok jqueríhez*/
+
+.olvasoc{
+    font-size: 30px;
+}
+
+
+
+/*----------------------------------*/
 @keyframes mymove{
     to {left: 100%; }
     

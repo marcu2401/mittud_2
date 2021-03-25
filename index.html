@@ -17,18 +17,28 @@
       //animáci
       $(document).ready(function(){
         $("#hehe").click(function(){
-            $("#smile").show()
+            $("#smile").toggle()
                        .animate({top:'14rem'},5000,)
                        .animate({top:'-30rem'}, 5000); 
 
-            $("body").css({backgroundColor:'black'});
-            $("#keret").css({border:'none', backgroundColor:'black', color:'white'}).addClass("vagany") ;
-            $("#span1").addClass("span1");  
-            $("#span2").addClass("span2");  
-            $("#span3").addClass("span3");  
-            $("#span4").addClass("span4");  
+            $("body").toggleClass("bodycs");
+            $("#keret").toggleClass("vagany") ;
+            $("#span1").toggleClass("span1");  
+            $("#span2").toggleClass("span2");  
+            $("#span3").toggleClass("span3");  
+            $("#span4").toggleClass("span4");  
         });
-      });
+
+        $("#olvaso").click(function () {
+                $("*").toggleClass('olvasoc');
+                $("p").toggleClass('olvasoc');
+                $("h1").toggleClass('olvasoc');
+                $("h2").toggleClass('olvasoc');
+       });      
+    });
+
+     
+      
         
         function Alaphelyzet() {
             document.getElementById('demo').style.fontSize = '30px';
@@ -49,20 +59,13 @@
         function nappali() {
             $("#keret").css({backgroundColor:'white', color:'black'});
         }
-        function olvaso(){
-            $(document).ready(function(){
-                $("*").css({"fontSize":"30px"});
-                $("h1").css({"fontSize":"50px"});
-                $("p").css({"fontSize":"25px"});
-                $("h2").css({"fontSize":"35px"});
-            });
-        }
+       
+        
         function adat(){
-        $(document).ready(function(){
-            $("img").hide();
-            $("#fel, #le").hide();
-            $("#fent, #lent").hide();
-        }) ; 
+            $("img").toggle();
+            $("#fel, #le").toggle();
+            $("#fent, #lent").toggle();
+       
     };
         
     </script>
@@ -91,13 +94,13 @@
                   <a class="nav-link" href="#" onclick="nappali()">Nappali mód</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" onclick="adat()">Adatforgalom</a>
+                  <a class="nav-link" href="#" onclick="adat()" id="adat">Adatforgalom</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link " href="#"onclick="olvaso()">Olvasómód</a>
+                  <a class="nav-link " href="#" id="olvaso">Olvasómód</a>
                 </li>
                 <li class="nav-item">    <!--onclick="anime()"-->
-                   <a  class="nav-link " href="#" id="hehe"  >Vagányság/Királyság/Hercegség/Sárm</a>
+                   <a  class="nav-link " href="#" id="hehe" >Vagányság/Királyság/Hercegség/Sárm</a>
                 </li>
               </ul>
             </div>
